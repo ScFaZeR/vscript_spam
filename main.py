@@ -39,7 +39,7 @@ async def on_ready():
     # Démarre la boucle de 10 minutes
     ping_routine.start()
 
-@tasks.loop(minutes=10)
+@tasks.loop(minutes=3)
 async def ping_routine():
     # On attend que le bot soit bien prêt avant de commencer
     await client.wait_until_ready()
